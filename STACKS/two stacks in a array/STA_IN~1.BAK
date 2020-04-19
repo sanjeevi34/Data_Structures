@@ -1,0 +1,72 @@
+#include<stdio.h>
+#include<conio.h>
+
+int arr[6];
+
+int top_a = -1;
+int top_b = 6;
+
+void push_a( int n)
+{
+	if(top_a+1 == top_b)
+		printf("\nStack Overflow");
+	else
+	{
+		top_a++;
+		arr[top_a] = n;
+	}
+}
+
+void push_b(int n)
+{
+	if(top_a+1 == top_b)
+		printf("\nStack Overflow");
+	else
+	{
+		top_b--;
+		arr[top_b] = n;
+	}
+}
+
+int pop_a()
+{
+	if(top_a == -1)
+		printf("\nStack A Underflow");
+	else
+	{
+		int n = arr[top_a];
+		top_a--;
+		return n;
+	}	
+	return 0;
+}
+
+int pop_b()
+{
+	if(top_b == 6)
+		printf("\nStack B Underflow");
+	else
+	{
+		int n = arr[top_b];
+		top_b++;
+		return n;
+	}	
+	return 0;
+}
+
+void main()
+{
+	clrscr();
+	push_a(10);
+	push_b(100);
+	push_a(20);
+	push_b(200);
+	push_a(30);
+	push_b(300);
+	push_a(500);
+	for(int i=0; i<6; i++)
+	{
+		printf("\n%d",arr[i]);
+	}
+	getch();
+}
