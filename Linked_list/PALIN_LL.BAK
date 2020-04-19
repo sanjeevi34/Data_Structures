@@ -1,0 +1,151 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdio.h>
+
+struct node
+{
+ int data;
+ struct node *next;
+};
+struct node *head,*tail=NULL,*headnew;
+int odd=0,even=0,ntpalin=0;
+void add_node(int number)
+{
+   struct node *newnode=(struct node*)malloc(sizeof(struct node));
+   newnode->data=number;
+   newnode->next=NULL;
+   if(head==NULL)
+   {
+	head=newnode;
+	tail=newnode;
+   }
+   else
+   {
+       tail->next=newnode;
+       tail=newnode;
+   }
+
+}
+struct node* reverse()
+{
+   struct node *prev,*current,*next;
+   prev=NULL;
+   current=head;
+   while(current!=NULL)
+   {
+     next=current->next;
+     current->next=prev;
+     prev=current;
+     current=next;
+   }
+   return prev;
+}
+
+struct node* find_mid()
+{
+  struct node *fast,*slow;
+  slow=fast=head;
+  while((fast->next!=NULL)&&(fast->next->next!=NULL))
+  {
+   slow=slow->next;
+   fast=fast->next->next;
+
+  }
+  if(fast->next==NULL)
+  {
+   odd=1;
+  }
+  else
+  {
+   even=1;
+   }
+  return slow;
+}
+
+
+void display()
+{
+ struct node *temp=head;
+ printf("\n");
+ if(head==NULL)
+  printf("List is empty");
+ else
+ {
+   while(temp->next!=NULL)
+   {
+    printf("%d->",temp->data);
+    temp=temp->next;
+   }
+   printf("%d",temp->data);
+ }
+}
+void main()
+{
+
+   struct node *head_cpy,*midnode,*temp,*mid_rev,*temp2;
+   clrscr();
+   add_node(1);
+   add_node(2);
+  // add_node(3);
+//   add_node(3);
+  // add_node(2);
+   add_node(3);
+   display();
+   midnode=find_mid();
+
+   printf("\n%d",midnode->data);
+   temp=head_cpy=head;
+   if(odd==1)
+   {
+    head=midnode->next;
+    mid_rev=reverse();
+    temp2=mid_rev;
+    while(temp2!=NULL)
+    {
+      if(temp->data!=temp2->data)
+      {
+	ntpalin=1;
+	break;
+      }
+      temp=temp->next;
+      temp2=temp2->next;
+    }
+
+    midnode->next=mid_rev;
+    head=head_cpy;
+   }
+
+
+   temp=head_cpy;
+   if(even==1)
+   {
+    head=midnode->next;
+    mid_rev=reverse();
+    temp2=mid_rev;
+    while(temp2!=NULL)
+    {
+      if(temp->data!=temp2->data)
+      {
+	ntpalin=1;
+	break;
+      }
+      temp=temp->next;
+      temp2=temp2->next;
+    }
+
+    midnode->next=mid_rev;
+    head=head_cpy;
+   }
+   if(ntpalin==1)
+   {
+    printf("\n Not a palindrome");
+   }
+   else
+   {
+    printf("\nPalindrome");
+   }
+    display();
+
+
+   getch();
+}
