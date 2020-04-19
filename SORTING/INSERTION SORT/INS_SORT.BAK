@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+
+int * insertion_sort(int *a , int n)
+{	
+	
+	for(i=1; i<n; i++)
+	{
+		key = a[i];
+		j=i-1;
+		while(key<a[j] && j!=0)
+		{
+			a[j] = a[j-1];
+			j--;
+		}
+		a[j] = key;
+	}
+	
+	return a;
+}
+
+void main()
+{
+	int i;
+	int a[] = {20 , 3, 15, 1, 22, 40};
+	int *b;
+	int n = sizeof(a)/sizeof(a[0]);
+	clrscr();
+	b = insertion_sort(a,n);
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",b[i]);
+	}
+	getch();
+}
