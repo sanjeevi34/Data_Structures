@@ -1,0 +1,8 @@
+This is my directory which contains most of the data structures implementation
+in C and some programs in cpp.
+
+This contains data structures such as
+1/ linked list
+2/ stack
+3/ queue
+4/ tree
