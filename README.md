@@ -12,3 +12,4 @@ Deployment is done with the help of git and github
 ## How to Contribute
 
 This is asimpel project, deployment can be on any server
+Done for the staging area
