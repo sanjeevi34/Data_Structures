@@ -13,3 +13,6 @@ Deployment is done with the help of git and github
 
 This is asimpel project, deployment can be on any server
 Done for the staging area
+
+
+haha added for current directory
