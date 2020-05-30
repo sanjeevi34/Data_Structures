@@ -4,11 +4,10 @@
 Thanks to all my students
 <Description>
 Adding changes before rebasing conflict
+These changes are from feature branch branch big troube
 <Abstract>
 
 <Content>
-Adding conflicts from master branch
 <Conclusion>
-
-This conflict from master branch
+Just nothing 
 <Reference>
