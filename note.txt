@@ -6,7 +6,7 @@ Thanks to all my students
 Adding changes before rebasing conflict
 These changes are from feature branch branch big troube
 <Abstract>
-
+Adding abstract
 <Content>
 <Conclusion>
 Just nothing 
