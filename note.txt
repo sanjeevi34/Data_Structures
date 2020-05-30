@@ -7,7 +7,8 @@ Adding changes before rebasing conflict
 <Abstract>
 
 <Content>
-
+Adding conflicts from master branch
 <Conclusion>
 
+This conflict from master branch
 <Reference>
