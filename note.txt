@@ -8,7 +8,8 @@ These changes are from feature branch branch big troube
 <Abstract>
 Adding abstract
 <Content>
-Adding content from remote repository 
+Changing the content for stashing 
+adding some other after stashing
 <Conclusion>
 Just something 
 <Reference>
