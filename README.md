@@ -5,7 +5,7 @@ this is a simple webstie project for
 showing to use git and github
 
 ## git
-
+Emergy fix after stash
 ## Deployment
 Deployment is done with the help of git and github
 
