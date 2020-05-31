@@ -18,7 +18,7 @@ Done for the staging area
 haha added for current directory
 
 
-Copyright section 2020 SANJEEVI
+Copyright section 2020 SANJEEVI & suresh
 
 Please frok this repository.
 
