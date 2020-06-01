@@ -1,5 +1,5 @@
 <Title>
-Adding title
+Title for tagging examples
 <Acknowledgement>
 Thanks to all my students
 <Description>
